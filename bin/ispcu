@@ -28,9 +28,8 @@ sub normalize (Int:D $v, Int:D $r, Int:D $l, Int:D $s) {
 }
 
 sub MAIN (
-#   Str:D   :$isp-admin!,                           #= ISP admin name
     Str:D   :$isp-admin     = 'ISPMON',             #= ISP admin name
-    Str:D   :$minimum       = '8.1.23.0',           #= Minimum ISP client level
+    Str:D   :$minimum       = '8.1.24.0',           #= Minimum ISP client level
 ) {
     die 'Malformed --minimum <' ~ $minimum ~ '>' unless my $minimum-match = VRLS.parse($minimum);
     my ISP::dsmadmc $dsmadmc;
